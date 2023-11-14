@@ -24,10 +24,13 @@ const i18n = createI18n({
  })
 
 
+
+
 // mount App
 createApp(App)
 .use(createPinia())
 .use(i18n)
+.use(require('vue-moment'))
 .use(router)
 .use(VueTippy,  {
 	directive: 'tippy', // => v-tippy
