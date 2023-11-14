@@ -28,12 +28,13 @@ const i18n = createI18n({
  import VueAxios from 'vue-axios'
 
 
+const VueMoment = require("vue-moment");
 
 Vue.createApp(App)
 .use(createPinia())
 .use(VueAxios, axios)
 .use(i18n)
-.use(require('vue-moment'))
+.use(VueMoment)
 .use(router)
 .use(VueTippy,  {
 	directive: 'tippy', // => v-tippy

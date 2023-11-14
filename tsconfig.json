@@ -1,6 +1,8 @@
 {
 	"noImplicitAny": true,
 	"compilerOptions": {
+		"esModuleInterop":true,
+		"allowSyntheticDefaultImports":true,
 		"useDefineForClassFields": true,
 		"module": "ESNext",
 		"lib": [
