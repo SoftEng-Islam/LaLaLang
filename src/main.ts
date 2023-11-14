@@ -1,5 +1,5 @@
 import { createPinia } from "pinia";
-import { createApp } from "vue";
+import * as Vue from 'vue' // in Vue 3
 
 
 import App from "./App.vue";
@@ -24,11 +24,14 @@ const i18n = createI18n({
  })
 
 
+ import axios from 'axios'
+ import VueAxios from 'vue-axios'
 
 
-// mount App
-createApp(App)
+
+Vue.createApp(App)
 .use(createPinia())
+.use(VueAxios, axios)
 .use(i18n)
 .use(require('vue-moment'))
 .use(router)
