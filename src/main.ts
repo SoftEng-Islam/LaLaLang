@@ -1,5 +1,7 @@
 import { createPinia } from "pinia";
 import { createApp } from "vue";
+
+
 import App from "./App.vue";
 import router from "./router/index";
 
@@ -16,9 +18,16 @@ import VueTippy from 'vue-tippy';
 import 'tippy.js/dist/tippy.css'; // optional for styling
 
 
+import { createI18n } from 'vue-i18n';
+const i18n = createI18n({
+	// something vue-i18n options here ...
+ })
+
+
 // mount App
 createApp(App)
 .use(createPinia())
+.use(i18n)
 .use(router)
 .use(VueTippy,  {
 	directive: 'tippy', // => v-tippy
