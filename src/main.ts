@@ -21,32 +21,35 @@ import 'tippy.js/dist/tippy.css'; // optional for styling
 import { createI18n } from 'vue-i18n';
 const i18n = createI18n({
 	// something vue-i18n options here ...
- })
+})
 
 
- import axios from 'axios'
- import VueAxios from 'vue-axios'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
+
+// import VueGridLayout from 'vue-grid-layout';
 
 
 const VueMoment = require("vue-moment");
 
 Vue.createApp(App)
-.use(createPinia())
-.use(VueAxios, axios)
-.use(i18n)
-.use(VueMoment)
-.use(router)
-.use(VueTippy,  {
-	directive: 'tippy', // => v-tippy
-	component: 'tippy', // => <tippy/>
-	componentSingleton: 'tippy-singleton', // => <tippy-singleton/>,
-	defaultProps: {
-	  placement: 'auto-end',
-	  allowHTML: true,
-	}, // => Global default options * see all props
-  }).use(PerfectScrollbar, {
-	watchOptions: true,
-	options: {
-		swipeEasing: true,
-	},
-}).mount("#app");
+	.use(createPinia())
+	.use(VueAxios, axios)
+	.use(i18n)
+	.use(VueMoment)
+	.use(router)
+	.use(VueTippy, {
+		directive: 'tippy', // => v-tippy
+		component: 'tippy', // => <tippy/>
+		componentSingleton: 'tippy-singleton', // => <tippy-singleton/>,
+		defaultProps: {
+			placement: 'auto-end',
+			allowHTML: true,
+		}, // => Global default options * see all props
+	}).use(PerfectScrollbar, {
+		watchOptions: true,
+		options: {
+			swipeEasing: true,
+		},
+	}).mount("#app");
